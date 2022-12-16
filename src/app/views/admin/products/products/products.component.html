@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Products</h1>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Products DataTable</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Product Name</th>
+              <th>Product Description</th>
+              <th>Product State</th>
+              <th>Product Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th>Product Name</th>
+              <th>Product Description</th>
+              <th>Product State</th>
+              <th>Product Image</th>
+              <th>Actions</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr *ngFor="let item of dataArray;index as i">
+              <td>{{i}}</td>
+              <td>{{item.productName}}</td>
+              <td>{{item.productDesc}}</td>
+              <td>{{item.productState}}</td>
+              <td>{{item.filename}}</td>
+              <th>
+                <button class="btn btn-info" (click)="details(item._id)">
+                  Details
+                </button>
+                &nbsp;
+                <button class="btn btn-danger" (click)="deleteproduct(item._id,i)">
+                  Delete
+                </button>
+              </th>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

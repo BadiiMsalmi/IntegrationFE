@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="alert alert-danger" *ngIf="messageErr">
+        {{messageErr}}
+    </div>
+</div>
+
+<div class="container" *ngIf="!messageErr">
+    <div class="col-lg-8 border p-3 main-section bg-white">
+        <div class="row m-0">
+            <div class="col-lg-4 left-side-product-box pb-3">
+                <img src="http://nicesnippets.com/demo/pd-image1.jpg" class="border p-3">
+            </div>
+            <div class="col-lg-8">
+                <div class="right-side-pro-detail border p-3 m-0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="m-0 p-0">{{dataObject.productName}}</p>
+                        </div>
+                        <div class="col-lg-12 pt-2">
+                            <h6>Description : </h6>
+                            <span>{{dataObject.productDesc}}</span>
+                            <hr class="m-0 pt-2 mt-2">
+                        </div>
+                        <div class="col-lg-12 pt-2">
+                            <h6>State : </h6>
+                            <span>{{dataObject.productState}}</span>
+                            <hr class="m-0 pt-2 mt-2">
+                        </div>
+                        <div class="col-lg-12 mt-3">
+                            <div class="row">
+                                <div class="col-lg-6 pb-2">
+                                    <a href="#" class="btn btn-danger w-100" >DELETE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
